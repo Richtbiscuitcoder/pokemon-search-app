@@ -17,7 +17,8 @@ const getPokemon = async () => {
   try {
     const pokemonNameOrId = searchInput.value.toLowerCase();
     const response = await fetch(
-      `https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemonNameOrId}`
+      `https://pokeapi.co/api/v2/pokemon/${pokemonNameOrId}`
+      
     );
     const data = await response.json();
 
