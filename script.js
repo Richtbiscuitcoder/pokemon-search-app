@@ -25,8 +25,10 @@ const getPokemon = async (pokemon) => {
         pokemonId.textContent = `#${data.id}`;
         weight.textContent = `Weight: ${data.weight}`;
         height.textContent = `Height: ${data.height}`;
-        spriteContainer.innerHTML = `<img src="${data.sprites.front_default}" alt="${data.name}" front default sprite/>`;
-        types.innerHTML = data.types.map(obj => `<span>${obj.type.name}</span>`).join(' ');
+        spriteContainer.innerHTML = `
+        <img src="${data.sprites.front_default}" alt="${data.name}" front default sprite/>
+        `;
+        types.innerHTML = data.types.map(obj => `<span class="type ${obj.type.name}">${obj.type.name}</span>`).join(' ');
 
         hp.textContent = data.stats[0].base_stat;
         attack.textContent = data.stats[1].base_stat;
