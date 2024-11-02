@@ -66,6 +66,7 @@ const resetDisplay = () => {
   specialAttack.textContent = '';
   specialDefense.textContent = '';
   speed.textContent = '';
+  searchInput.value = '';
 };
 
 searchForm.addEventListener('submit', e => {
