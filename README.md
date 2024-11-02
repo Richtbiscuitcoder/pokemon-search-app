@@ -2,4 +2,4 @@
 
 Pokemon search app from FreeCodeCamps challenge 
 
-Using a fetch request to pull JSON from pokeAPI.com to display seelected pokemon and their stats.
+Using a fetch request to pull JSON from pokeAPI.com to display selected pokemon and their stats.
