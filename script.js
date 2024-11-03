@@ -40,14 +40,40 @@ const getPokemon = async () => {
     speed.textContent = data.stats[5].base_stat;
 
     // Set types
+    const typeColors = {
+      normal: '#A8A878',
+      fire: '#EE8130',
+      water: '#6390F0',
+      electric: '#F7D02C',
+      grass: '#7AC74C',
+      ice: '#96D9D6',
+      fighting: '#C22E28',
+      poison: '#A33EA1',
+      ground: '#E2BF65',
+      flying: '#A98FF3',
+      psychic: '#F95587',
+      bug: '#A6B91A',
+      rock: '#B6A136',
+      ghost: '#735797',
+      dragon: '#6F35FC',
+      dark: '#705746',
+      steel: '#B7B7CE',
+      fairy: '#D685AD'
+    };
     types.innerHTML = data.types
-      .map(obj => `<span class="type ${obj.type.name}">${obj.type.name} </span>`)
-      .join('');
-  } catch (err) {
-    resetDisplay();
-    alert('Pokémon not found');
-    console.log(`Pokémon not found: ${err}`);
-  }
+      .map(obj => {
+        const typeName = obj.type.name;
+        const color = typeColors[typeName] || 'white';
+        return `<span class="type-box" style="background-color: ${color};">${typeName.toUpperCase()}</span>`;
+      })
+      .join(' ');
+    } catch (err) {
+      resetDisplay();
+      alert('Pokémon not found');
+      console.log(`Pokémon not found: ${err}`);
+    }
+
+ 
 };
 
 const resetDisplay = () => {
@@ -72,4 +98,5 @@ const resetDisplay = () => {
 searchForm.addEventListener('submit', e => {
   e.preventDefault();
   getPokemon();
-});
+}); 
+

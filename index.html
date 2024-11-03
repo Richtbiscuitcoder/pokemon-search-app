@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
@@ -7,11 +7,10 @@
   </head>
   <body>
     <div id="search-container">
-      <form id="search-form">
+      <form id="search-form" class="search-form">
         <label for="search-input">Search for Pokémon Name or ID:</label>
         <input type="search" id="search-input" name="pokemon" required/>
-        
-        <button id="search-button">search</button>
+        <button id="search-button">Search</button>
       </form> 
     </div>
     <div id="output">
@@ -24,10 +23,10 @@
         <span id="height"></span>
       </div>
       <div id="sprite-container" class="sprite-container">
-        <img id="sprite"/>
+        <img id="sprite" alt=""/>
       </div>
       <div id="type">
-        <span id="types"></span>
+        <span id="types" class="types"></span>
       </div>
       <div class="bottom-container">
         <table class="table">
